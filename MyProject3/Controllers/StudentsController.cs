@@ -48,7 +48,7 @@ namespace MyProject3.Controllers
         // GET: Students/Create
         public IActionResult Create()
         {
-            ViewData["ClassroomId"] = new SelectList(_context.Classrooms, "Id", "Id");
+            ViewData["ClassroomId"] = new SelectList(_context.Classrooms, "Id", "ClassName");
             return View();
         }
 
