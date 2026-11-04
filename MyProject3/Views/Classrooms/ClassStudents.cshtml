@@ -4,17 +4,17 @@
     ViewData["Title"] = "ClassStudents";
 }
 
-<h1>ClassStudents</h1>
+<h1>פרטי כיתה ותלמידים</h1>
 
 <div>
-    <h4>Classroom</h4>
+    <h4>פרטים</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ClassName)
+        <dt class="col-sm-2">
+            שם הכיתה
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ClassName)
+        <dd class="col-sm-10">
+            @Model.ClassName
         </dd>
     </dl>
 </div>
@@ -35,10 +35,10 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.FirstName)
+                        שם פרטי:
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.LastName)
+                        שם משפחה:
                     </td>
                     <td>
                         <a asp-controller="Students" asp-action="Details" asp-route-id="@item.Id">פרטים</a>

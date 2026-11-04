@@ -20,3 +20,116 @@ html {
 body {
   margin-bottom: 60px;
 }
+/* הגדרת כיווניות מימין לשמאל ועיצוב כללי */
+html, body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* כותרות מעוצבות */
+h1, h2, h3, h4 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* עיצוב טבלאות הנתונים */
+.table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+    .table th {
+        background-color: #34495e;
+        color: #ffffff;
+        border: none;
+        text-align: right;
+    }
+
+    .table td {
+        vertical-align: middle;
+        text-align: right;
+    }
+
+/* עיצוב כפתורים */
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+
+    .btn-primary:hover {
+        background-color: #2980b9;
+        border-color: #2980b9;
+    }
+
+.btn-success {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+    border-radius: 6px;
+}
+
+/* עיצוב טפסים ותיבות בחירה (Dropdown) */
+.form-control, .form-select {
+    text-align: right;
+    border-radius: 6px;
+    border: 1px solid #bdc3c7;
+    padding: 8px 12px;
+}
+
+    .form-control:focus, .form-select:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+    }
+
+/* התאמת סרגל הניווט העליון ל-RTL */
+.navbar-nav {
+    padding-right: 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #2c3e50 !important;
+}
+/* כפתור פרטים - ירוק עדין */
+.btn-info {
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    color: white;
+    border-radius: 6px;
+}
+
+    .btn-info:hover {
+        background-color: #16a085;
+        color: white;
+    }
+
+/* כפתור עריכה - כתום / חרדל */
+.btn-warning {
+    background-color: #f39c12;
+    border-color: #f39c12;
+    color: white;
+    border-radius: 6px;
+}
+
+    .btn-warning:hover {
+        background-color: #d68910;
+        color: white;
+    }
+
+/* כפתור מחיקה - אדום בולט */
+.btn-danger {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    border-radius: 6px;
+}
+
+    .btn-danger:hover {
+        background-color: #c0392b;
+    }
