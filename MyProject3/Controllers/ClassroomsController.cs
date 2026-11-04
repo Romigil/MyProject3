@@ -148,6 +148,26 @@ namespace MyProject3.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        // GET: Classrooms/ClassStudents/5
+        public async Task<IActionResult> ClassStudents(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            // שליפת הכיתה לפי ה-id, כולל רשימת התלמידים ששייכים אליה
+            var classroom = await _context.Classrooms
+                .Include(c => c.Students)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (classroom == null)
+            {
+                return NotFound();
+            }
+
+            return View(classroom);
+        }
 
         private bool ClassroomExists(int id)
         {

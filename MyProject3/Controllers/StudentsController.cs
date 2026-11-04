@@ -48,7 +48,7 @@ namespace MyProject3.Controllers
         // GET: Students/Create
         public IActionResult Create()
         {
-            ViewData["ClassroomId"] = new SelectList(_context.Classrooms, "Id", "ClassName");
+            ViewBag.ClassroomId = new SelectList(_context.Classrooms, "Id", "ClassName");
             return View();
         }
 
@@ -82,7 +82,7 @@ namespace MyProject3.Controllers
             {
                 return NotFound();
             }
-            ViewData["ClassroomId"] = new SelectList(_context.Classrooms, "Id", "Id", student.ClassroomId);
+            ViewData["ClassroomId"] = new SelectList(_context.Classrooms, "Id", "ClassName", student.ClassroomId);
             return View(student);
         }
 
@@ -160,5 +160,6 @@ namespace MyProject3.Controllers
         {
             return _context.Students.Any(e => e.Id == id);
         }
+
     }
 }
